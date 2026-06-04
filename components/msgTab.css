@@ -134,6 +134,9 @@
 
   #profile{
     height: 10vh;
+    position: fixed;
+    /* padding-top: 10%; */
+    background-color: rgb(234, 15, 121);
   }
   #profile h1{
     width: 50%;
@@ -145,7 +148,7 @@
   }
 
   #messages{
-    height: 80vh;
+    height: 85vh;
   }
 
   #sendDiv{

@@ -10,9 +10,8 @@ import { socket } from "@/lib/socket";
 
 export default function Home() {
   const router = useRouter()
-
-    const [mobile, setMobile] = useState(false);
-    const [isMobile, setIsMobile] = useState(true);
+  
+  const [mobile, setMobile] = useState(false);
   
   const [users, setUsers] = useState(null)
   const [id, setId] = useState(null)
@@ -76,6 +75,18 @@ if (!sessionStorage.getItem("token")) {
     };
   }, []);
 
+  const [isMobile, setIsMobile] = useState(false);
+
+useEffect(() => {
+const checkScreen = () => {
+  setIsMobile(window.innerWidth < 420);
+};
+
+checkScreen();
+window.addEventListener("resize", checkScreen);
+
+return () => window.removeEventListener("resize", checkScreen);
+}, []);
 
 
   return (
