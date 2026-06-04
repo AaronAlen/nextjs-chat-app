@@ -47,8 +47,8 @@ if (!sessionStorage.getItem("token")) {
       console.log(data.datas);
       setUsers(data.datas)
       console.log("myId", myId);
-      const value = data.datas?.find((value)=>myId != value._id)
-      setId(value?.name)
+      // const value = data.datas?.find((value)=>myId != value._id)
+const value = data.datas?.find((value: any) => myId !== value._id)      setId(value?.name)
       // sessionStorage.setItem("name",value.name);
       console.log("names",sessionStorage.getItem("name"));
     }
