@@ -64,7 +64,7 @@ export default function Home() {
 
   useEffect(() => {
     const checkScreen = () => {
-      setIsMobile(window.innerWidth < 420);
+      setIsMobile(window.innerWidth < 500);
     };
 
     checkScreen();
